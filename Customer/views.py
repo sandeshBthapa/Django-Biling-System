@@ -47,7 +47,7 @@ def delete_customer(request,pk):
     delete_cus = Customer.objects.get(id=pk)
     if request.method == 'POST':
         delete_cus.delete()
-        messages.success(request, "Customer has been created")
+        messages.success(request, "Customer has been deleted")
         return redirect('list_customer')
     context = {
         'object': delete_cus
@@ -62,7 +62,7 @@ def update_customer(request, pk):
         form = CustomerModelForm(request.POST, instance=customer)
         if form.is_valid():
             form.save()
-            messages.success(request, "Customer has been created")
+            messages.success(request, "Customer has been updated")
             return redirect("list_customer")
 
     context = {"form": form}
@@ -80,7 +80,7 @@ def signup_page(request):
             raw_password = form.cleaned_data.get("password")
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            messages.success(request, "Customer has been created")
+            messages.success(request, "Successfully Sign Up")
             return redirect("list_customer")
     else:
         form = UserCreationForm()
@@ -96,7 +96,7 @@ def signin_page(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request, "Customer has been created")
+                messages.success(request, "Successfully Sign In")
                 return redirect("list_customer")
     else:
         form = AuthenticationForm()
@@ -105,7 +105,7 @@ def signin_page(request):
 
 def logOutPage(request):
     logout(request)
-    messages.success(request, "Customer has been created")
+    messages.success(request, "Successfully logOut")
     return redirect("sign_in")
 
 

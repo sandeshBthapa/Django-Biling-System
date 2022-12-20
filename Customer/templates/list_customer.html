@@ -6,7 +6,7 @@
 
 <div class="row" style="align-content: center;">
         <div class="col-sm col-md-2 offset-2">
-            <div class="container">
+            <div class="container" id="cus-search">
                 <form class="d-flex" action="" method="POST">
                     {% csrf_token %}
                     <select name="status" class="form-control"  style="width: 150px;" required>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-md col-md-4 ">
-            <div class="container">
+            <div class="container" id="cus-create1">
                 <a href="{%url 'create_customer'%}" class="btn btn-primary btn-md">Create</a>
             </div>
 

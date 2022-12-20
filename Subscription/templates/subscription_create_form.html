@@ -2,10 +2,10 @@
 {% load crispy_forms_tags %}
 {%block body%}
 
-<form action="" method="POST" class="form-control">
+<form action="" method="POST" class="form-control2">
     {%csrf_token%}
     {{form|crispy}}
-    <input class="btn btn-primary" type="submit" value="Create Customer"> 
+    <input class="btn btn-primary" id="sub-create1" type="submit" value="Create Customer"> 
 </form>
 
 

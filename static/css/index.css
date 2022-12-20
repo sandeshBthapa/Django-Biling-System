@@ -1,0 +1,80 @@
+.form-control1{
+  margin-top: 10px;
+  margin-left: 30%;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+    
+}
+.form1{
+  margin-top: 10px;
+  margin-left: 30%;
+  width: 40%;
+  padding: 10px;
+    
+}
+
+.form-control2{
+  margin-top: 10px;
+  margin-left: 30%;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+    
+}
+
+#form-control3{
+  margin-top: 10px;
+  margin-left: 30%;
+  width: 40%;
+  padding: 10px;
+    
+}
+
+#up-cus{
+    margin-top: 10px;
+    margin-left: 35%;
+}
+
+#up-cus1{
+    margin-top: 10px;
+    margin-left: 35%;
+}
+
+#sub-create1{
+    margin-top: 10px;
+    margin-left: 40%;
+}
+
+#cus-create{
+    margin-top: 10px;
+    margin-left: 40%;
+}
+
+#fil-sub{
+    margin-top: 10px;
+    margin-left: 1%;
+}
+
+#creat-sub{
+    margin-top: 10px;
+    margin-left: 160%;
+}
+
+#cus-search{
+    margin-top: 10px;
+}
+
+#cus-create1{
+    margin-top: 10px;
+    margin-left: 160%;
+}
+
+#myElem{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 300px;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 40px;
+}

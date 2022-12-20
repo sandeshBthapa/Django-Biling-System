@@ -2,10 +2,9 @@
 {% load crispy_forms_tags %}
 
 {%block body%}
-<br>
 <div class="row" style="align-content: center;">
         <div class="col-sm col-md-2 offset-2">
-            <div class="container">
+            <div class="container" id="fil-sub">
                    <form class="d-flex" action="" method="POST">
                         {% csrf_token %}
                         <select name="status" class="form-control"  style="width: 150px;" required>
@@ -15,13 +14,13 @@
 
                         
                         </select>
-                        <input class="btn btn-warning btn-sm" type="submit" value="Filter">
+                        <input class="btn btn-warning btn-sm"  type="submit" value="Filter">
                     </form>
             </div>
         </div>
 
         <div class="col-md col-md-4 ">
-            <div class="container">
+            <div class="container" id='creat-sub'>
                 <a href="{%url 'create-subscription'%}" class="btn btn-primary btn-md">Create</a>
             </div>
 

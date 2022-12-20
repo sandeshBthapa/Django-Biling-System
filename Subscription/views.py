@@ -38,7 +38,7 @@ def delete_subscription(request,pk):
     delete_sub = Subscription.objects.get(id=pk)
     if request.method == 'POST':
         delete_sub.delete()
-        messages.success(request, "subscription has been created")
+        messages.success(request, "subscription has been deleted")
         return redirect('all_sub')
     context = {
         'object': delete_sub
@@ -53,7 +53,7 @@ def update_subscription(request, pk):
         form = SubscriptionCreateForm(request.POST, instance=customer)
         if form.is_valid():
             form.save()
-            messages.success(request, "subscription has been created")
+            messages.success(request, "subscription has been updated")
             return redirect("all_sub")
 
     context = {"form": form}

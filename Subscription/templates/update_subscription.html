@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+{%load crispy_forms_tags%}
 
 {% block body %}
     <!-- Main Section -->
-   <form class="form" action="" method="POST">
-      {{form.as_p}}
-      <input class="btn btn-warning" type="submit" value="Update Customer">
+   <form class="form"  id="form-control3" action="" method="POST">
+      {%csrf_token%}
+      {{ form|crispy }}
+      <input class="btn btn-warning" id="up-cus" type="submit" value="Update Customer">
    </form>
 
 {% endblock body %}
