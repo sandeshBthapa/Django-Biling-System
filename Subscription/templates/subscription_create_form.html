@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{% load crispy_forms_tags %}
+{%block body%}
+
+<form action="" method="POST" class="form-control">
+    {%csrf_token%}
+    {{form|crispy}}
+    <input class="btn btn-primary" type="submit" value="Create Customer"> 
+</form>
+
+
+{%endblock body%}

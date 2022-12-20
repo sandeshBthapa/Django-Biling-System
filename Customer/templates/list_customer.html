@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{%block body%}
+
+
+<div class="row" style="align-content: center;">
+        <div class="col-sm col-md-2 offset-2">
+            <div class="container">
+                <form class="d-flex" action="" method="POST">
+                    {% csrf_token %}
+                    <select name="status" class="form-control"  style="width: 150px;" required>
+                        <option disabled selected value>select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+
+                    
+                    </select>
+                    <input class="btn btn-warning btn-sm" type="submit" value="Filter">
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md col-md-4 ">
+            <div class="container">
+                <a href="{%url 'create_customer'%}" class="btn btn-primary btn-md">Create</a>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class=" col-sm-9 offset-2">
+            <div class="card card-body">
+                <h4 class="text-center alert alert-success">List Of Customer</h4>
+         
+        {% if enquires %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                   
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Created_at</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for customer in enquires %}
+                <tr>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.created_at}}</td>
+                    <td>{{customer.phone}}</td>
+                    <td>{{customer.status}}</td>
+                     <td>
+                        <a href="{%url 'update-customer' customer.id%}" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="{%url 'delete-customer' customer.id %}" class="btn btn-danger btn-sm">Delete</a>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% else %}
+        <h4 class="text-center alert alert-warning">No Records</h4>
+        {% endif %}
+            </div>
+
+        </div>
+    </div>
+ 
+
+{%endblock body%}

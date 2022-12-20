@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{%block body%}
+
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+
+    <input class="btn btn-primary btn-sm" type="submit" value="Sign In">
+</form>
+<p>Doenot have an account SigUp here</p>
+<a class="btn btn btn-secondary btn-sm" href="{%url 'sign_up'%}" role="button">SignUp</a>
+
+{%endblock body%}

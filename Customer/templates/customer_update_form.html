@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    <!-- Main Section -->
+   <form class="form" action="" method="POST">
+      {%csrf_token%}
+      {{form|crispy}}
+      <input class="btn btn-warning" type="submit" value="Update Customer">
+   </form>
+
+{% endblock body %}

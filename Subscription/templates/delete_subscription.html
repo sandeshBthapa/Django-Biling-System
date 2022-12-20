@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+
+
+{%block body%}
+
+    <form method="POST">
+        {%csrf_token%}
+        <p>Are you sure you want to delete '{{object.customer_name.name}}'</p>
+        <a class="btn btn-outline-info btn-sm" href="{{request.META.HTTP_REFERER}}" role="button">Go Back</a>
+        <input class="btn btn-outline-danger btn-sm" type="submit" value="Confirm">
+    </form>
+
+{%endblock body%}
