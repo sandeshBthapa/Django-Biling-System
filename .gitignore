@@ -1,2 +1,4 @@
 .env
 env_biling
+__pycache__
+db.sqlite3

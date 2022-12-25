@@ -54,11 +54,15 @@
                     <td>{{customer.created_at}}</td>
                     <td>{{customer.phone}}</td>
                     <td>{{customer.status}}</td>
+                    
                      <td>
                         <a href="{%url 'update-customer' customer.id%}" class="btn btn-secondary btn-sm">Edit</a>
+                   
+                   
                         <a href="{%url 'delete-customer' customer.id %}" class="btn btn-danger btn-sm">Delete</a>
                         
                     </td>
+                   
                 </tr>
                 {% endfor %}
             </tbody>
