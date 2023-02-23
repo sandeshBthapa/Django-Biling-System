@@ -126,3 +126,5 @@ def logOutPage(request):
     return redirect("sign_in")
 
 
+def tested_page(request):
+    return HttpResponse('created this to just test weather it work or not')
