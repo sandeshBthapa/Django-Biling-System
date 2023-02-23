@@ -128,3 +128,7 @@ def logOutPage(request):
 
 def tested_page(request):
     return HttpResponse('now this is working fine')
+
+
+def created_on_stage1(request):
+    return HttpResponse('created on stage_1 branch !!')
