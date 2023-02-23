@@ -127,4 +127,4 @@ def logOutPage(request):
 
 
 def tested_page(request):
-    return HttpResponse('created this to just test weather it work or not')
+    return HttpResponse('now this is working fine')
